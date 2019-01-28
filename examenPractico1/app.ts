@@ -3,7 +3,7 @@
 let nombre = "Ricardo Tapia";
 let edad = 23;
 
-const PERSONAJE = {
+const PERSONAJE : {nombre:string, edad:number} = {
   nombre: nombre,
   edad: edad
 };
@@ -24,14 +24,14 @@ function resultadoDoble( a, b ){
   return (a + b) * 2
 }
 
-let resultadoDobleF = (a:number, b:number) => (a+b*2);
+let resultadoDobleF = (a:number, b:number) => (a+b)*2;
 
 // Función con parametros obligatorios, opcionales y por defecto
 // donde NOMBRE = obligatorio
 //       PODER  = opcional
 //       ARMA   = por defecto = "arco"
 function getAvenger( nombre:string, poder?:string, arma:string = "arco" ){
-  let mensaje;
+  let mensaje:string;
   if( poder ){
      mensaje = nombre + " tiene el poder de: " + poder + " y un arma: " + arma;
   }else{
@@ -48,8 +48,8 @@ function getAvenger( nombre:string, poder?:string, arma:string = "arco" ){
 // ese método debe de retornar un numero.
 
 class Rectangulo {
-  public base:number;
-  public altura:number;
+  base:number;
+  altura:number;
 
-  get area(): number {return this.base * this.altura;};
+  area(): number {return this.base * this.altura;};
 }
